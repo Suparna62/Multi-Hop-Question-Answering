@@ -1,0 +1,24 @@
+# Configuration for the multi-hop QA system
+
+# Decomposition Model (T5 for sequence-to-sequence)
+decomposition_model:
+  pretrained_model: "t5-small"
+  output_dir: "models/decomposition_model"
+  learning_rate: 2e-5
+  num_train_epochs: 3
+  batch_size: 8
+  eval_batch_size: 8
+
+# Single-hop QA Model (DistilBERT for extractive QA)
+single_hop_qa_model:
+  pretrained_model: "distilbert-base-uncased"
+  output_dir: "models/single_hop_qa_model"
+  learning_rate: 2e-5
+  num_train_epochs: 3
+  batch_size: 16
+  eval_batch_size: 16
+
+# Pipeline settings
+pipeline:
+  max_search_results: 5
+  max_context_length: 512
