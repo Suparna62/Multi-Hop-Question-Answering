@@ -1,0 +1,9 @@
+transformers[torch]
+datasets
+accelerate
+evaluate
+rouge-score
+duckduckgo_search
+pyyaml
+pandas
+tqdm
